@@ -1,0 +1,31 @@
+SKIPFLOW - INSTALLAZIONE IN CHROME / EDGE
+
+1. Estrai tutto lo ZIP (tasto destro > Estrai tutto).
+2. Apri chrome://extensions nella barra degli indirizzi di Chrome.
+   Con Microsoft Edge usa edge://extensions.
+3. Attiva Modalità sviluppatore.
+4. Premi Carica estensione non pacchettizzata (Edge: Carica decompressa).
+5. Scegli la cartella SkipFlow che contiene manifest.json.
+6. Fissa SkipFlow con la puntina nel menu puzzle del browser.
+7. RICARICA la pagina del video e premi play.
+
+Non devi eseguire file EXE o installare altri programmi.
+Conserva la cartella estratta: il browser carica l'estensione da lì.
+
+PULSANTI PRINCIPALI
+-10 / +10: indietro e avanti di 10 secondi.
+-30 / +30: indietro e avanti di 30 secondi.
+Le durate si cambiano da Impostazioni.
+
+IN PIÙ
+Velocità 0.25x - 4x, loop A-B, segnalibri, annulla salto, mini player,
+schermo intero, tempo rimanente e scorciatoie Shift + frecce.
+Premi Studio sul video per gli strumenti aggiuntivi.
+
+PROVA
+Per aprire demo/index.html dal PC, attiva "Consenti l'accesso agli URL dei
+file" nei dettagli di SkipFlow. La demo include un filmato originale di
+60 secondi, senza audio. Puoi scegliere anche un tuo video.
+
+Trovi istruzioni complete, permessi e limiti in README.md e PRIVACY.md.
+Le verifiche svolte sono documentate in VERIFICA.md.

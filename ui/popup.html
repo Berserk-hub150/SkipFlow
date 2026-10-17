@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SkipFlow · Telecomando video</title><link rel="stylesheet" href="ui.css"></head>
+<body class="popup">
+  <header class="row spread"><div class="brand"><img src="../icons/icon48.png" alt=""><div><h1>SkipFlow<span class="eyebrow"> / PLAY YOUR WAY</span></h1><p>Il tuo telecomando, su ogni video.</p></div></div><input class="switch" type="checkbox" id="enabled" aria-label="Attiva SkipFlow" checked></header>
+  <div class="stack">
+    <section class="card" aria-label="Video selezionato">
+      <div class="row spread"><span class="eyebrow">ORA SOTTO CONTROLLO</span><span class="pill" id="video-count">Cerco video…</span></div>
+      <select class="video-select" id="videos" aria-label="Scegli il video da controllare"><option>Nessun video rilevato</option></select>
+      <div id="empty" class="help">Apri una pagina con un video. Se l’estensione è appena stata caricata, ricarica la pagina.</div>
+      <div id="player" hidden>
+        <div class="row spread" style="margin-top:12px"><span class="clock" id="clock">0:00 / —</span><button type="button" class="ghost" id="undo" data-command="undoSeek" style="font-size:11px;padding:0">↶ Annulla salto</button></div>
+        <input id="timeline" class="timeline" type="range" min="0" max="1000" value="0" aria-label="Posizione nel video">
+        <div class="remaining" id="remaining"></div>
+        <div class="transport"><button type="button" class="mint" data-command="backLarge" id="back-large">−30</button><button type="button" class="mint" data-command="backSmall" id="back-small">−10</button><button type="button" data-command="play" id="play" aria-label="Riproduci">▶</button><button type="button" class="mint" data-command="forwardSmall" id="forward-small">+10</button><button type="button" class="mint" data-command="forwardLarge" id="forward-large">+30</button></div>
+        <div class="speed-row"><button type="button" data-command="speedDown" aria-label="Riduci velocità">−</button><div class="rate" id="rate">1×</div><button type="button" data-command="speedUp" aria-label="Aumenta velocità">+</button></div>
+        <div class="presets" aria-label="Velocità rapide"><button type="button" data-rate="0.5">0.5×</button><button type="button" data-rate="1">1×</button><button type="button" data-rate="1.5">1.5×</button><button type="button" data-rate="2">2×</button><button type="button" data-rate="3">3×</button></div>
+        <form class="jump-time" id="jump-form"><input type="text" id="jump-to" placeholder="Vai a… es. 12:30" aria-label="Minuto o secondo esatto"><button type="submit">Vai</button></form>
+      </div>
+    </section>
+    <section class="card" id="study" hidden>
+      <div class="row spread"><h2>Una parte da rivedere?</h2><button type="button" class="ghost" data-command="clearLoop" style="padding:0;font-size:11px">Pulisci</button></div>
+      <div class="tools" style="margin-top:11px"><button type="button" data-command="setA">A · Inizio</button><button type="button" data-command="setB">B · Fine</button><button type="button" data-command="toggleLoop" id="loop" aria-pressed="false">↻ Loop A–B</button></div>
+      <div class="loop-state" id="loop-state">A — · B —</div>
+      <div class="divider"></div>
+      <div class="row spread"><h2>I tuoi segnalibri</h2><small id="bookmark-count">0 / 50</small></div>
+      <form class="bookmark-form" id="bookmark-form"><input type="text" id="bookmark-label" maxlength="100" placeholder="Nome del punto (facoltativo)" aria-label="Nome del segnalibro"><button type="submit" id="save-bookmark" aria-label="Salva segnalibro">☆ Salva</button></form>
+      <div class="bookmarks" id="bookmarks"></div>
+      <div class="divider"></div><div class="tools"><button type="button" data-command="pip" id="pip">↗ Mini player</button><button type="button" data-command="fullscreen">⛶ Intero</button><button type="button" data-command="togglePanel" id="panel-toggle">Pannello</button></div>
+    </section>
+  </div>
+  <div class="status" id="status" role="status" aria-live="polite"></div>
+  <footer><label class="toggle site-toggle"><input type="checkbox" id="site-enabled" checked><span id="site-label">Attivo su questo sito</span></label><button type="button" class="ghost" id="settings">Impostazioni ↗</button></footer>
+  <div class="help"><kbd>Shift</kbd> + <kbd>← / →</kbd> salta · <kbd>↑ / ↓</kbd> velocità<br>Tutto resta sul tuo dispositivo. Nessun account.</div>
+  <script src="../shared/core.js"></script><script src="client.js"></script><script src="popup.js"></script>
+</body></html>

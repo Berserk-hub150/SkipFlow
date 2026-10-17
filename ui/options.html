@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SkipFlow · Impostazioni</title><link rel="stylesheet" href="ui.css"></head>
+<body class="options"><main>
+  <header><div class="brand"><img src="../icons/icon48.png" alt=""><div><h1>SkipFlow</h1><p>Controlla ogni secondo.</p></div></div><span class="tag">1.0 · CHROME & EDGE</span></header>
+  <p class="eyebrow" style="margin-bottom:10px">IL TUO RITMO, LE TUE REGOLE</p><h2 class="intro">Meno tempo a cercare.<br>Più tempo a capire.</h2><p class="lede">Personalizza i salti e la velocità. Le modifiche si applicano ai video già aperti: salva e torna a guardare.</p>
+  <form id="settings-form"><div class="grid">
+    <section class="card"><h2>Un salto della misura giusta.</h2>
+      <div class="two"><label class="field">Salto breve<input type="number" id="smallSkip" min="1" max="300" step="1" required><span class="sub">Da 1 a 300 secondi</span></label><label class="field">Salto lungo<input type="number" id="largeSkip" min="1" max="600" step="1" required><span class="sub">Da 1 a 600 secondi</span></label></div>
+      <div class="two"><label class="field">Passo velocità<select id="speedStep"><option value="0.05">0.05×</option><option value="0.1">0.10×</option><option value="0.25">0.25×</option><option value="0.5">0.50×</option><option value="1">1.00×</option></select></label><label class="field">Velocità iniziale<input type="number" id="defaultRate" min="0.25" max="4" step="0.05" required></label></div>
+      <label class="field">Posizione del pannello<select id="position"><option value="top-left">In alto a sinistra</option><option value="top-right">In alto a destra</option><option value="bottom-left">In basso a sinistra</option></select><span class="sub">Puoi anche trascinarlo con la maniglia ⠿.</span></label>
+      <p class="sub">La velocità va da 0.25× a 4×. Il pulsante 2× torna alla velocità precedente con un secondo clic.</p>
+    </section>
+    <section class="card"><h2>Come preferisci guardare.</h2><div class="checklist">
+      <label class="toggle"><input type="checkbox" id="enabled"><span><strong>SkipFlow attivo</strong><span class="sub">Controlli sui video delle pagine supportate.</span></span></label>
+      <label class="toggle"><input type="checkbox" id="rememberRate"><span><strong>Ricorda l’ultima velocità</strong><span class="sub">Usala sui nuovi video. Se disattivato, viene usata la velocità iniziale.</span></span></label>
+      <label class="toggle"><input type="checkbox" id="shortcuts"><span><strong>Scorciatoie da tastiera</strong><span class="sub">Restano inattive mentre scrivi nei campi di testo.</span></span></label>
+      <label class="toggle"><input type="checkbox" id="fadePanel"><span><strong>Pannello discreto</strong><span class="sub">Diventa trasparente dopo qualche secondo. Passa sopra con il mouse per rivederlo.</span></span></label>
+    </div><div class="divider"></div><h3 style="font-size:13px">Siti disattivati</h3><div class="sites" id="sites"></div><p class="note">Disattiva un sito dal menu dell’estensione. Qui puoi riattivarlo con un clic. La scelta vale per il dominio esatto e i player incorporati nella pagina.</p></section>
+    <section class="card wide"><h2>Le dita sanno già dove andare.</h2><div class="two"><table aria-label="Scorciatoie di navigazione"><tbody>
+      <tr><td>Indietro / avanti · salto breve</td><td><kbd>Shift + ← / →</kbd></td></tr><tr><td>Riduci / aumenta velocità</td><td><kbd>Shift + ↓ / ↑</kbd></td></tr><tr><td>Torna a 1×</td><td><kbd>Shift + R</kbd></td></tr><tr><td>Attiva / disattiva 2×</td><td><kbd>Shift + G</kbd></td></tr><tr><td>Annulla ultimo salto</td><td><kbd>Shift + U</kbd></td></tr>
+    </tbody></table><table aria-label="Scorciatoie per lo studio"><tbody>
+      <tr><td>Segna inizio / fine intervallo</td><td><kbd>Shift + A / B</kbd></td></tr><tr><td>Attiva / disattiva loop</td><td><kbd>Shift + L</kbd></td></tr><tr><td>Salva segnalibro</td><td><kbd>Shift + M</kbd></td></tr><tr><td>Mostra / nascondi pannello</td><td><kbd>Shift + V</kbd></td></tr><tr><td>Sposta il pannello</td><td>Trascina ⠿</td></tr>
+    </tbody></table></div><p class="note">Le scorciatoie controllano il video selezionato o quello in riproduzione nel frame con il focus. Con player incorporati, clicca prima sul video. Il loop ripete l’intervallo con la precisione consentita dal player.</p></section>
+  </div><div class="actions"><button class="mint" type="submit">Salva preferenze</button><span class="status" id="status" role="status" aria-live="polite"></span><button type="button" class="ghost reset" id="reset">Ripristina preferenze</button></div></form>
+  <div class="privacy"><strong>Solo sul tuo dispositivo.</strong> Preferenze e segnalibri sono salvati nello spazio locale dell’estensione. Nessuna analisi del traffico, nessun server, nessuna telemetria. L’accesso alle pagine serve a rilevare i player e mostrarvi i controlli.</div>
+  <footer>Funziona con video HTML5 accessibili. Alcuni player protetti, pagine interne del browser, dirette senza DVR e video in shadow root chiuse possono limitare le funzioni. Per i file sul PC abilita “Consenti l’accesso agli URL dei file” nei dettagli dell’estensione.</footer>
+  <script src="../shared/core.js"></script><script src="client.js"></script><script src="options.js"></script>
+</main></body></html>
