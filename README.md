@@ -4,6 +4,8 @@
 
 **[Scarica SkipFlow 1.0.0 per Chrome / Edge](https://github.com/Berserk-hub150/SkipFlow/raw/refs/heads/main/downloads/SkipFlow-1.0.0.zip)** · [Installazione](#installa-in-chrome-windows-macos-o-linux) · [Privacy](PRIVACY.md) · [Verifiche](VERIFICA.md)
 
+**Pubblicazione gratuita su Edge:** [guida e testi per lo store](PUBLISH_EDGE.md) · [ZIP per lo store](https://github.com/Berserk-hub150/SkipFlow/raw/refs/heads/main/downloads/SkipFlow-edge-store-1.0.0.zip)
+
 **Controlla ogni secondo.** Un’estensione Chrome / Edge con pulsanti grandi per andare avanti e indietro nei video, velocità personalizzata e strumenti per ripassare un passaggio.
 
 Implementazione originale ispirata all’idea di [Video Speed Controller](https://github.com/igrigorik/videospeed). Il progetto di riferimento dispone già di scorciatoie per saltare avanti e indietro: SkipFlow dà più spazio ai pulsanti di navigazione e aggiunge un flusso per studio, loop e segnalibri. Nessun suo codice o asset è stato copiato. Nessuna affiliazione.
